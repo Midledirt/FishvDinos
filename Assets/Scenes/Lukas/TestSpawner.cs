@@ -16,6 +16,7 @@ public class TestSpawner : MonoBehaviour
             {
                 Instantiate(danoprefab[(int)danos.typeofenemy], transform.GetChild(danos.spawner).transform);
                 danos.isSpawned = true;
+
             }
         }
     }
