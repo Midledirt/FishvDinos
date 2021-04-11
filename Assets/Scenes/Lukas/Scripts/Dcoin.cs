@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Dcoin : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class Dcoin : MonoBehaviour, IPointerDownHandler
 {
     public float FALL_SPEED = 1f;
 
@@ -15,15 +15,9 @@ public class Dcoin : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         
     }
 
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        Debug.Log("Scribbly");
-    }
+   
 
-    public void OnMouseDown()
-    {
-        Debug.Log("You pressedme");
-    }
+ 
 
 
 
