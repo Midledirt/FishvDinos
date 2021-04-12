@@ -7,7 +7,7 @@ using TMPro;
 public class FishCardManager : MonoBehaviour
 {
 
-
+    
     [Header("Cards Parameters")]
     public int amtOfCards;
    // int currentamountofcards = 0;
@@ -24,7 +24,7 @@ public class FishCardManager : MonoBehaviour
 
     private void Start()
     {
-        //  AddFishCard();
+        
         amtOfCards = FishCardSO.Length;
         FishCards = new GameObject[amtOfCards];
 
@@ -41,6 +41,7 @@ public class FishCardManager : MonoBehaviour
 
         cardManager.friendlyunitmenu = FishCardSO[index];
         cardManager.fishSprite = FishCardSO[index].fishSprite;
+        cardManager.UI = GameObject.FindGameObjectWithTag("Canvas");
 
         FishCards[index] = Card;
 
