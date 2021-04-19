@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class scrDinoMovement : MonoBehaviour
 {
+    public static Action OnDinoGoalReached;
     [Tooltip("This float is used to generate a goal possition for the dinos. Increase the number to make the path for the dinosaurs longer")]
     [SerializeField] private float mapLength;
     private Vector3 dinoGoalPos;
@@ -32,6 +34,7 @@ public class scrDinoMovement : MonoBehaviour
     private void DinoReachedGoal()
     {
         print("I reached the goal");
+        OnDinoGoalReached?.Invoke();
         transform.gameObject.SetActive(false);
     }
     private void OnDrawGizmos() //Visualize the path

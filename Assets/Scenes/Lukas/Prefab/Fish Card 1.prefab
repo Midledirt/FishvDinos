@@ -89,10 +89,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08eeff9469b8bae49adae75ab186ce79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishSprite: {fileID: 0}
+  UI: {fileID: 0}
+  fishSprite: {fileID: 21300000, guid: b3735ef16e41ea74b91bf1126b6ca66e, type: 3}
   friendlyunitmenu: {fileID: 0}
   fishPrefab: {fileID: 115592285535721917, guid: 82cde52cbed038140b9de9e55dd39606,
     type: 3}
+  isOverColl: 0
+  colliderName: {fileID: 0}
 --- !u!1 &786705157307248406
 GameObject:
   m_ObjectHideFlags: 0

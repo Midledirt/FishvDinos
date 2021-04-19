@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1634212162362415257}
   - component: {fileID: 8253114196583152106}
   - component: {fileID: 8348640643654181468}
+  - component: {fileID: 5675040445604053966}
   m_Layer: 5
   m_Name: Fish
   m_TagString: Untagged
@@ -74,3 +75,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5675040445604053966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7649144085979139695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4741a3929f890c34282036b9bb36ed7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CanBeHit:
+    serializedVersion: 2
+    m_Bits: 2048
+  attackTimer: 2
