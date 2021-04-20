@@ -39,27 +39,27 @@ public class scrDinoSpawner : MonoBehaviour
         {
             case 0:
                 GameObject newdinoInstancePos0 = Instantiate(dino, spawnPossitions[0].transform.position,Quaternion.identity,transform);
-                scrDinoMovement dinoMovement0 = newdinoInstancePos0.GetComponent<scrDinoMovement>();
+                scrDino dinoMovement0 = newdinoInstancePos0.GetComponent<scrDino>();
                 dinoMovement0.AssignGoalPos(spawnPossitions[0]);
                 return;            
             case 1:
                 GameObject newdinoInstancePos1 = Instantiate(dino, spawnPossitions[1].transform.position,Quaternion.identity,transform);
-                scrDinoMovement dinoMovement1 = newdinoInstancePos1.GetComponent<scrDinoMovement>();
+                scrDino dinoMovement1 = newdinoInstancePos1.GetComponent<scrDino>();
                 dinoMovement1.AssignGoalPos(spawnPossitions[1]);
                 return;            
             case 2:
                 GameObject newdinoInstancePos2 = Instantiate(dino, spawnPossitions[2].transform.position,Quaternion.identity,transform);
-                scrDinoMovement dinoMovement2 = newdinoInstancePos2.GetComponent<scrDinoMovement>();
+                scrDino dinoMovement2 = newdinoInstancePos2.GetComponent<scrDino>();
                 dinoMovement2.AssignGoalPos(spawnPossitions[2]);
                 return;            
             case 3:
                 GameObject newdinoInstancePos3 = Instantiate(dino, spawnPossitions[3].transform.position,Quaternion.identity,transform);
-                scrDinoMovement dinoMovement3 = newdinoInstancePos3.GetComponent<scrDinoMovement>();
+                scrDino dinoMovement3 = newdinoInstancePos3.GetComponent<scrDino>();
                 dinoMovement3.AssignGoalPos(spawnPossitions[3]);
                 return;
             case 4:
                 GameObject newdinoInstancePos4 = Instantiate(dino, spawnPossitions[4].transform.position, Quaternion.identity, transform);
-                scrDinoMovement dinoMovement4 = newdinoInstancePos4.GetComponent<scrDinoMovement>();
+                scrDino dinoMovement4 = newdinoInstancePos4.GetComponent<scrDino>();
                 dinoMovement4.AssignGoalPos(spawnPossitions[4]);
                 return;
         }

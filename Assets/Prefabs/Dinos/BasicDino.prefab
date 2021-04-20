@@ -9,8 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4751748311493185899}
-  - component: {fileID: 4751748311493185898}
-  - component: {fileID: 7110657833527005164}
+  - component: {fileID: -3955052704770075810}
   - component: {fileID: 6825246879314363428}
   - component: {fileID: 3374597927251970351}
   - component: {fileID: 7910142743979206246}
@@ -36,7 +35,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4751748311493185898
+--- !u!114 &-3955052704770075810
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,23 +44,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4751748311493185897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b07e02d5f51e32f4597b3cd67dc89ab8, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e1552aa4c61cb748b66d622c57b162a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mapLength: 20
   dinoMovementSpeed: 0.1
---- !u!114 &7110657833527005164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4751748311493185897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07802eb0d852c5741a35ba23dd2d5b87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  attackTimer: 1
 --- !u!114 &6825246879314363428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916a549ca3342934c8dd521dc2c55ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 5
 --- !u!61 &3374597927251970351
 BoxCollider2D:
   m_ObjectHideFlags: 0

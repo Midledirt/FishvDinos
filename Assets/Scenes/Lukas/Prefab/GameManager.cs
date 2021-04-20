@@ -48,13 +48,13 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable() //Happens as this object becomes active in the game
     {
-        scrDinoMovement.OnDinoGoalReached += GameOver; //Subscribes to this event with the method "GameOver". GameOver will then trigger
+        scrDino.OnDinoGoalReached += GameOver; //Subscribes to this event with the method "GameOver". GameOver will then trigger
         //whenever this event happens. This event is triggered in the class "scrDinoMovement". 
     }
 
     private void OnDisable() //Happens as(if) this object becomes unactive in the game
     {
-        scrDinoMovement.OnDinoGoalReached -= GameOver; //Desubscribes from the event over. (To prevent data leakage in case this class does
+        scrDino.OnDinoGoalReached -= GameOver; //Desubscribes from the event over. (To prevent data leakage in case this class does
         //not exist. Should never happen, but you never know...)
     }
 

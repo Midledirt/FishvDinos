@@ -10,7 +10,7 @@ public class scrDinoHealth : MonoBehaviour
     public void TakeDamage(int _damage)
     {
         health -= _damage;
-        print("Ouch! Took " + _damage + " damage.");
+        //print("Ouch! Took " + _damage + " damage.");
         if(health <= 0f)
         {
             DinoDies();
