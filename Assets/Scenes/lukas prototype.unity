@@ -1904,27 +1904,27 @@ PrefabInstance:
     - target: {fileID: 964737621865701763, guid: 00507d9ae9a81c145be6a569d1bb39d3,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 964737621865701763, guid: 00507d9ae9a81c145be6a569d1bb39d3,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 964737621865701763, guid: 00507d9ae9a81c145be6a569d1bb39d3,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 964737621865701763, guid: 00507d9ae9a81c145be6a569d1bb39d3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.08
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: 964737621865701763, guid: 00507d9ae9a81c145be6a569d1bb39d3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.24
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 964737621865701763, guid: 00507d9ae9a81c145be6a569d1bb39d3,
         type: 3}
@@ -2861,7 +2861,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 140
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2885,7 +2885,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761525513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 321, y: 141.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3603,8 +3603,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058299241}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -964, y: -539.3, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1647789212}
   - {fileID: 314904846}

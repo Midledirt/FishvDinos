@@ -6,18 +6,11 @@ public class scrDinoHealth : MonoBehaviour
 {
     [SerializeField] private int health;
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.D))
-        {
-            print("Ouch taking this much damage: " + 1);
-            TakeDamage(1);
-        }
-    }
 
     public void TakeDamage(int _damage)
     {
         health -= _damage;
+        print("Ouch! Took " + _damage + " damage.");
         if(health <= 0f)
         {
             DinoDies();

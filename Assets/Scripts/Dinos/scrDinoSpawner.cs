@@ -57,6 +57,11 @@ public class scrDinoSpawner : MonoBehaviour
                 scrDinoMovement dinoMovement3 = newdinoInstancePos3.GetComponent<scrDinoMovement>();
                 dinoMovement3.AssignGoalPos(spawnPossitions[3]);
                 return;
+            case 4:
+                GameObject newdinoInstancePos4 = Instantiate(dino, spawnPossitions[4].transform.position, Quaternion.identity, transform);
+                scrDinoMovement dinoMovement4 = newdinoInstancePos4.GetComponent<scrDinoMovement>();
+                dinoMovement4.AssignGoalPos(spawnPossitions[4]);
+                return;
         }
     }
     private IEnumerator SpawnDelay(float _spawndelay)

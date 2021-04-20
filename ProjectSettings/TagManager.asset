@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fish
   - Canvas
+  - Dino
   layers:
   - Default
   - TransparentFX

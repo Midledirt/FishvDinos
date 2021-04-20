@@ -23,13 +23,12 @@ public class SlotManager : MonoBehaviour
 
         if (fish == null)
         {
-            if (GameObject.FindGameObjectsWithTag("Fish") != null)
+            fish = GameObject.FindGameObjectWithTag("Fish");
+            if(fish != null)
             {
-                fish = GameObject.FindGameObjectWithTag("Fish");
                 fish.transform.SetParent(this.transform);
                 Vector3 pos = new Vector3(0, 0, -1);
                 fish.transform.localPosition = pos;
-
             }
 
         }

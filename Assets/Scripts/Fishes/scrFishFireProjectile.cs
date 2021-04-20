@@ -4,19 +4,26 @@ using UnityEngine;
 
 public class scrFishFireProjectile : MonoBehaviour
 {
+    [Tooltip("Set this to the dinosaur layer")]
     [SerializeField] private LayerMask CanBeHit;
-
-    [Tooltip("Sets the time between each attack")]
-    [SerializeField] private float attackTimer;
+    [Tooltip("Set time between shots. Defaults to 1")]
+    [SerializeField] private float attackTimer = 1;
     private float timeSinceLastAttack;
+    [Tooltip("Decides if this fish can fire projectiles")]
+    [SerializeField] private bool canFireProjectiles;
+    [Tooltip("The projectile this fish can fire")]
+    [SerializeField] private GameObject fishProjectile;
+    [Tooltip("Where the projectile is fired from")]
+    [SerializeField] private GameObject firePossition;
+
     private void FixedUpdate()
     {
         Debug.DrawRay(transform.position, transform.right * 1000f, Color.red);
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, 1000f, CanBeHit);
 
-        if(hit.collider != null)
+        if(hit.collider != null && canFireProjectiles)
         {
-            print("I have a target: " + hit.collider.name);
+            //print("I have a target: " + hit.collider.name);
             FireProjectile();
         }
     }
@@ -27,7 +34,17 @@ public class scrFishFireProjectile : MonoBehaviour
         if(timeSinceLastAttack >= attackTimer) //Check if enough time has passed
         {
             timeSinceLastAttack = 0; //Reset attack time
-
+            if(firePossition == null)
+            {
+                //print("Firing projectile, from bodypos!");
+                Instantiate(fishProjectile, transform.position, transform.rotation);
+                return;
+            }
+            else if(firePossition != null)
+            {
+                //print("Firing projectile, from firepos!");
+                Instantiate(fishProjectile, firePossition.transform.position, transform.rotation);
+            }
         }
     }
     private void OnEnable()
