@@ -19,7 +19,7 @@ public class scrFishAttack : MonoBehaviour
 
     private void FixedUpdate()
     {
-        print("My attack type is: " + fishAttackType);
+        //print("My attack type is: " + fishAttackType);
         Debug.DrawRay(transform.position, transform.right * 1000f, Color.red);
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, 1000f, CanBeHit);
 

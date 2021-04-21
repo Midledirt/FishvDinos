@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4751748311493185899}
   - component: {fileID: -3955052704770075810}
   - component: {fileID: 6825246879314363428}
+  - component: {fileID: 901518205369727945}
   - component: {fileID: 3374597927251970351}
   - component: {fileID: 7910142743979206246}
   m_Layer: 11
@@ -48,8 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapLength: 20
-  dinoMovementSpeed: 0.1
-  attackTimer: 1
+  dinoGoalPos: {x: 0, y: 0, z: 0}
 --- !u!114 &6825246879314363428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,7 +62,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916a549ca3342934c8dd521dc2c55ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+--- !u!114 &901518205369727945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4751748311493185897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f15dc3726ae2254689251cf0bb295b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stats: {fileID: 11400000, guid: da1fc0eaa8a2e204bb35963ff982d230, type: 2}
 --- !u!61 &3374597927251970351
 BoxCollider2D:
   m_ObjectHideFlags: 0

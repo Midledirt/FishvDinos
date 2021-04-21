@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class CardManager : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
 {
+    private ResourceManager resourceManager;
     public GameObject UI;
     public Sprite fishSprite;
     public FriendlyUnitMenu friendlyunitmenu;
@@ -13,12 +14,21 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
     public bool isOverColl = false;
     public SlotManager colliderName;
     SlotManager prevName;
-
+    public int FishCost { get; private set; }
     public int AttackType { get; private set; }
+    private void Awake()
+    {
+        resourceManager = ResourceManager.instance;
+    }
     public void SetAttackType(int _type)
     {
-        print("Assigned attack is: " + _type);
+        //print("Assigned attack is: " + _type);
         AttackType = _type;
+    }
+    public void SetCost(int _cost)
+    {
+        //print("My cost is: " + _cost);
+        FishCost = _cost;
     }
     public void OnDrag(PointerEventData eventData)
     {
@@ -67,6 +77,14 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
        // UI.SetActive(true);
        if (colliderName != null && !colliderName.isOccupied)
        {
+            //Resources check
+            if(resourceManager.Resources < FishCost)
+            {
+                print("Could not afford the fish");
+                Destroy(fish);
+                return;
+            }
+            resourceManager.SpendResources(FishCost); //Spend resources
             colliderName.isOccupied = true;
             fish.tag = "Untagged";
             fish.transform.SetParent(colliderName.transform);

@@ -8,15 +8,19 @@ public class scrDino : MonoBehaviour
     public static Action<scrFishHealth, int> OnDealingDamage;
     public static Action OnDinoGoalReached;
     [Tooltip("This float is used to generate a goal possition for the dinos. Increase the number to make the path for the dinosaurs longer")]
-    [SerializeField] private float mapLength;
-    private Vector3 dinoGoalPos;
-    [SerializeField] private float dinoMovementSpeed;
+    public float mapLength;
+    [HideInInspector] public Vector3 dinoGoalPos;
     private Vector3 dinoEndOfPathPoint; //Used to illustrate mapLength
     private float minDistanceToEnoughToEndPoint = 4f;
     private bool dinoCanMove;
     private scrFishHealth currentDinoTargetHealth;
-    [SerializeField] private float attackTimer;
     private float timeSinceLastAttack;
+
+    private scrDinoStats statsHolder;
+    private void Awake()
+    {
+        statsHolder = GetComponent<scrDinoStats>();
+    }
 
     private void Start()
     {
@@ -38,7 +42,7 @@ public class scrDino : MonoBehaviour
         {
             return;
         }
-        transform.position = Vector3.Lerp(transform.position, dinoGoalPos, dinoMovementSpeed * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, dinoGoalPos, statsHolder.Stats.DinoMovementSPeed * Time.deltaTime);
     }
     private void DealDamage()
     {
@@ -48,7 +52,7 @@ public class scrDino : MonoBehaviour
             {
                 //print("i have a target...");
                 timeSinceLastAttack += 1 * Time.deltaTime;
-                if (timeSinceLastAttack >= attackTimer)
+                if (timeSinceLastAttack >= statsHolder.Stats.DinoAttackRate)
                 {
                     print("attempting to deal damage...");
                     timeSinceLastAttack = 0f;
