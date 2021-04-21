@@ -13,6 +13,13 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
     public bool isOverColl = false;
     public SlotManager colliderName;
     SlotManager prevName;
+
+    public int AttackType { get; private set; }
+    public void SetAttackType(int _type)
+    {
+        print("Assigned attack is: " + _type);
+        AttackType = _type;
+    }
     public void OnDrag(PointerEventData eventData)
     {
       //  fishSprite = friendlyunitmenu.fishSprite;
@@ -44,7 +51,11 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
         fish = Instantiate(fishPrefab, pos, Quaternion.identity);
         fish.GetComponent<SpriteRenderer>().sprite = fishSprite;
 
-     //  fishSprite = friendlyunitmenu.fishSprite;
+        //Added by Jont
+        scrFishAttack fishAttack = fish.GetComponent<scrFishAttack>();
+        fishAttack.AssignAttackType(AttackType);
+
+        //  fishSprite = friendlyunitmenu.fishSprite;
         fish.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
     }

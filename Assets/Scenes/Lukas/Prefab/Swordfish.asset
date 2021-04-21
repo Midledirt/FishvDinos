@@ -16,3 +16,4 @@ MonoBehaviour:
   fishSprite: {fileID: 21300000, guid: 898dd3ea1af321f4cb9904c31c3b531a, type: 3}
   cost: 50
   cooldown: 20
+  attacktype: 1

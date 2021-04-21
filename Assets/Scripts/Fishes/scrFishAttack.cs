@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class scrFishFireProjectile : MonoBehaviour
+public class scrFishAttack : MonoBehaviour
 {
     [Tooltip("Set this to the dinosaur layer")]
     [SerializeField] private LayerMask CanBeHit;
@@ -15,9 +15,11 @@ public class scrFishFireProjectile : MonoBehaviour
     [SerializeField] private GameObject fishProjectile;
     [Tooltip("Where the projectile is fired from")]
     [SerializeField] private GameObject firePossition;
+    public int fishAttackType;
 
     private void FixedUpdate()
     {
+        print("My attack type is: " + fishAttackType);
         Debug.DrawRay(transform.position, transform.right * 1000f, Color.red);
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, 1000f, CanBeHit);
 
@@ -26,6 +28,10 @@ public class scrFishFireProjectile : MonoBehaviour
             //print("I have a target: " + hit.collider.name);
             FireProjectile();
         }
+    }
+    public void AssignAttackType(int attacktype)
+    {
+        fishAttackType = attacktype;
     }
     private void FireProjectile()
     {

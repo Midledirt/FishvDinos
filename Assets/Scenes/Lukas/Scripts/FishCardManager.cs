@@ -6,8 +6,6 @@ using TMPro;
 
 public class FishCardManager : MonoBehaviour
 {
-
-    
     [Header("Cards Parameters")]
     public int amtOfCards;
    // int currentamountofcards = 0;
@@ -54,5 +52,10 @@ public class FishCardManager : MonoBehaviour
         Card.GetComponentInChildren<RawImage>().texture = FishIcon;
         Card.GetComponentInChildren<TMP_Text>().text = "" + cost;
 
+        //Added by Jont
+        FishCardSO[index].ResetStats();
+        print("Attack type is: " + FishCardSO[index].AttackType + "...");
+        CardManager newCardManager = FishCards[index].GetComponent<CardManager>();
+        newCardManager.SetAttackType(FishCardSO[index].AttackType); //Assigns attack type
     }
 }
