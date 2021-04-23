@@ -57,6 +57,8 @@ public class FishCardManager : MonoBehaviour
         //print("Attack type is: " + FishCardSO[index].AttackType + "...");
         CardManager newCardManager = FishCards[index].GetComponent<CardManager>();
         newCardManager.SetAttackType(FishCardSO[index].AttackType); //Assigns attack type
+        newCardManager.SetFishHealth(FishCardSO[index].FishHealth);
         newCardManager.SetCost(FishCardSO[index].cost); //Assigns cost
+        newCardManager.SetCanGenerateResources(FishCardSO[index].CanGenerateResources);
     }
 }

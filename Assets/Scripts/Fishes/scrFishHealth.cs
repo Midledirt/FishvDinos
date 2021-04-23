@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class scrFishHealth : MonoBehaviour
 {
-    [SerializeField] private int fishHealth;
+    public static Action<GameObject> OnFishKilled;
+    private int fishHealth;
 
     public void TakeDamage(scrFishHealth _target, int _damage)
     {
@@ -19,8 +21,15 @@ public class scrFishHealth : MonoBehaviour
         }
 
     }
+    public void AssignHealth(int _amount)
+    {
+        fishHealth = _amount;
+    }
     private void FishDies()
     {
+        //Free up the space
+        OnFishKilled?.Invoke(this.gameObject); //Used to tell the slot manager that the space is freed up
+        //Kill the fish
         Destroy(this.gameObject);
     }
     private void OnEnable()

@@ -16,6 +16,8 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
     SlotManager prevName;
     public int FishCost { get; private set; }
     public int AttackType { get; private set; }
+    public int FishHealth { get; private set; }
+    public bool CanGenerateResources { get; private set; }
     private void Awake()
     {
         resourceManager = ResourceManager.instance;
@@ -24,6 +26,14 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
     {
         //print("Assigned attack is: " + _type);
         AttackType = _type;
+    }
+    public void SetFishHealth(int _amount)
+    {
+        FishHealth = _amount;
+    }
+    public void SetCanGenerateResources(bool value)
+    {
+        CanGenerateResources = value;
     }
     public void SetCost(int _cost)
     {
@@ -64,6 +74,10 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
         //Added by Jont
         scrFishAttack fishAttack = fish.GetComponent<scrFishAttack>();
         fishAttack.AssignAttackType(AttackType);
+        scrFishHealth fishHealth = fish.GetComponent<scrFishHealth>();
+        fishHealth.AssignHealth(FishHealth);
+        scrFishResourceGeneration fishResourceGeneration = fish.GetComponent<scrFishResourceGeneration>();
+        fishResourceGeneration.SetCanGenerateResources(CanGenerateResources);
 
         //  fishSprite = friendlyunitmenu.fishSprite;
         fish.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);

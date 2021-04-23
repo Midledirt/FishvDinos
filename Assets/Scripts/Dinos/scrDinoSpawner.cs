@@ -8,19 +8,46 @@ using UnityEngine;
 
 public class scrDinoSpawner : MonoBehaviour
 {
-    public int CurrentWave { get; set; }
+
 
     [SerializeField] private GameObject dino;
     [SerializeField] private GameObject[] spawnPossitions; //Needs to be set in inspector
-    private int currentWaveSize = 5;
+    private int currentWaveSize;
+
+    [Header("Customize waves")]
+    [Tooltip("How many waves there are in total")]
+    [SerializeField] private int numberOfWaves;
+    [Tooltip("How much time there is between waves")]
+    [SerializeField] private float timeBetweenWaves;
+    [Tooltip("The size of the first wave")]
+    [SerializeField] private int startingWaveSize;
+    [Tooltip("How many new dinos there are per wave")]
+    [SerializeField] private int numberOfNewDinosPerWave;
+    private float timeSinceLastWave;
+    public int CurrentWave { get; private set; }
+
+    private void Start()
+    {
+        CurrentWave = 0;
+        timeSinceLastWave = 0;
+        currentWaveSize = startingWaveSize;
+    }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)) //For testing
+        timeSinceLastWave += Time.deltaTime; //Increment timer
+        if(timeSinceLastWave >= timeBetweenWaves && CurrentWave < numberOfWaves)
         {
-            SpawnNewWave();
-            CurrentWave += 1;
+            timeSinceLastWave = 0f; //Reset timer
+            SpawnNewWave(); //Spawn the wave
+            currentWaveSize += numberOfNewDinosPerWave; //Increment wave size
+            CurrentWave += 1; //Increment current wave
         }
+        //if(Input.GetKeyDown(KeyCode.Space)) //For testing
+        //{
+        //    SpawnNewWave();
+        //    CurrentWave += 1;
+        //}
     }
     private void SpawnNewWave()
     {

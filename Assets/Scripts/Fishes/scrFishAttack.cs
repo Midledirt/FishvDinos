@@ -32,6 +32,12 @@ public class scrFishAttack : MonoBehaviour
     public void AssignAttackType(int attacktype)
     {
         fishAttackType = attacktype;
+        if (fishAttackType == 1)
+        {
+            canFireProjectiles = true;
+        }
+        else
+            canFireProjectiles = false;
     }
     private void FireProjectile()
     {

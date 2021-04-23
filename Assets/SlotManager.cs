@@ -33,9 +33,24 @@ public class SlotManager : MonoBehaviour
 
         }
     }
+    private void FishKilled(GameObject _fish) //Dette funker ikke...
+    {
+        if(fish == _fish)
+        {
+            isOccupied = false;
+        }
+    }
 
     private void OnMouseExit()
     {
       //  Destroy(fish);
+    }
+    private void OnEnable()
+    {
+        scrFishHealth.OnFishKilled += FishKilled;
+    }
+    private void OnDisable()
+    {
+        scrFishHealth.OnFishKilled -= FishKilled;
     }
 }

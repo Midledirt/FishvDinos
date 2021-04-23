@@ -7,6 +7,7 @@ public class scrProjectile : MonoBehaviour
     [Header("Assign scriptable object with stats")]
     [SerializeField] private ProjectileStatsSO stats;
     private SpriteRenderer spriteRenderer;
+    private float projectileTimeBeforeDespawn = 20f;
 
     private void Awake()
     {
@@ -18,6 +19,11 @@ public class scrProjectile : MonoBehaviour
     }
     private void Update()
     {
+        projectileTimeBeforeDespawn -= Time.deltaTime;
+        if(projectileTimeBeforeDespawn <= 0f)
+        {
+            Destroy(this.gameObject);
+        }
         MoveProjectile();
     }
     private void OnTriggerEnter2D(Collider2D collision)

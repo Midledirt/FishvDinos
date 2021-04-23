@@ -139,6 +139,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: DinoSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 964737621865701762, guid: 00507d9ae9a81c145be6a569d1bb39d3,
+        type: 3}
+      propertyPath: numberOfWaves
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 964737621865701762, guid: 00507d9ae9a81c145be6a569d1bb39d3,
+        type: 3}
+      propertyPath: startingWaveSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 964737621865701762, guid: 00507d9ae9a81c145be6a569d1bb39d3,
+        type: 3}
+      propertyPath: timeBetweenWaves
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 964737621865701762, guid: 00507d9ae9a81c145be6a569d1bb39d3,
+        type: 3}
+      propertyPath: numberOfNewDinosPerWave
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 964737621865701763, guid: 00507d9ae9a81c145be6a569d1bb39d3,
         type: 3}
       propertyPath: m_RootOrder

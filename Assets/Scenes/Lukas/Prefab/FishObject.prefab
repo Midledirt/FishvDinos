@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -9193876115282610006}
   - component: {fileID: 6783201781144819172}
   - component: {fileID: 6871443839767188110}
+  - component: {fileID: 2340948607445721327}
   m_Layer: 12
   m_Name: FishObject
   m_TagString: Fish
@@ -131,6 +132,7 @@ MonoBehaviour:
   fishProjectile: {fileID: 7075900198723623425, guid: 8625ebef2fdbae949a30e7eb0d2adac1,
     type: 3}
   firePossition: {fileID: 8343067288861399994}
+  fishAttackType: 0
 --- !u!114 &6871443839767188110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +145,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44096e74fc359174aa5f65fb3e2eab0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishHealth: 3
+--- !u!114 &2340948607445721327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115592285535721917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68a42b6b7264654884500c5f232f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourcesGainedPerCycle: 10
+  timeBetweenNewResources: 10
 --- !u!1 &8343067288861399994
 GameObject:
   m_ObjectHideFlags: 0
