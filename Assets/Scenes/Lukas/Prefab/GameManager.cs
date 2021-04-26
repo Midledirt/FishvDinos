@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject gameOverPanel; //Added by Jont
+    [SerializeField] private GameObject gameWonPanel; //Added by Jont
     public GameObject draggingObject;
     public GameObject currentContainer;
 
@@ -17,9 +18,13 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+        gameWonPanel.SetActive(false); 
         gameOverPanel.SetActive(false); //A pannel i added to visualize loosing and giving the player the option to restart
     }
-
+    public void SetGameWonPanel()
+    {
+        gameWonPanel.SetActive(true);
+    }
     public void PlaceObject()
     {
         if (draggingObject != null && currentContainer != null)
