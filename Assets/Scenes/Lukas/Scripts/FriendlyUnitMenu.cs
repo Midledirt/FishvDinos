@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class FriendlyUnitMenu : ScriptableObject
 {
+
+    public Vector2 size;
     public Texture FishIcon;
     public Sprite fishSprite;
     public int cost;

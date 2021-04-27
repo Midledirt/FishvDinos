@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class CardManager : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
 {
+    
     private ResourceManager resourceManager;
     public GameObject UI;
     public Sprite fishSprite;
@@ -46,16 +47,30 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
         fish.GetComponent<SpriteRenderer>().sprite = fishSprite;
         if (prevName != colliderName || prevName == null)
         {
-            isOverColl = false;
-
-            if (prevName != null)
+            if (!colliderName.isOccupied)
             {
-                prevName.fish = null;
+
+               fish.transform.position = new Vector3(0, 0, -1);
+                fish.transform.localPosition = new Vector3(0, 0, -1);
+                 isOverColl = false;
+
+                if (prevName != null)
+                {
+                  prevName.fish = null;
+
+                }
+                 prevName = colliderName;
+            }
+        }
+        else
+        {
+            if(!colliderName.isOccupied)
+            {
+                fish.transform.position = new Vector3(0, 0, -1);
+                fish.transform.localPosition = new Vector3(0, 0, -1);
 
             }
-                prevName = colliderName;
         }
-
         if (!isOverColl)
         {
              fish.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -69,6 +84,7 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
     {
         Vector3 pos = new Vector3(0, 0, -1);
         fish = Instantiate(fishPrefab, pos, Quaternion.identity);
+        fish.transform.localScale = friendlyunitmenu.size;
         fish.GetComponent<SpriteRenderer>().sprite = fishSprite;
 
         //Added by Jont
@@ -104,7 +120,7 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
             fish.transform.SetParent(colliderName.transform);
             fish.transform.position = new Vector3(0, 0, -1);
             fish.transform.localPosition = new Vector3(0, 0, -1);
-        }
+       }
         else
         {
             Destroy(fish);

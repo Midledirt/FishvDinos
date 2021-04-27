@@ -26,7 +26,8 @@ public class scrFishResourceGeneration : MonoBehaviour
         {
             timeSincePreviousResources = 0f; //Reset the timer
             resourceManager.GainResources(resourcesGainedPerCycle); //Gain resources
-            //print("Just produced " + resourcesGainedPerCycle + " amount of resources!");
+                                                                    //print("Just produced " + resourcesGainedPerCycle + " amount of resources!");
+            
         }
     }
     public void SetCanGenerateResources(bool value)

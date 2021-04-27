@@ -11,6 +11,7 @@ public class ResourceManager : MonoBehaviour
     [Tooltip("How many resources the player starts with")]
     [SerializeField] private int startingResources;
 
+
     public int Resources { get; private set; }
 
     private void Awake()
@@ -22,6 +23,9 @@ public class ResourceManager : MonoBehaviour
     {
         Resources = startingResources;
         currentResources.text = Resources.ToString();
+
+        //Lukas la til
+        GainResources(startingResources);
     }
 
     public void GainResources(int _amount)
