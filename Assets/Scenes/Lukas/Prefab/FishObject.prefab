@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6783201781144819172}
   - component: {fileID: 6871443839767188110}
   - component: {fileID: 2340948607445721327}
+  - component: {fileID: 344622094220585126}
   m_Layer: 12
   m_Name: FishObject
   m_TagString: Fish
@@ -33,6 +34,7 @@ Transform:
   m_LocalScale: {x: 0.11406801, y: 0.1123665, z: 0.15}
   m_Children:
   - {fileID: 9017388648612000302}
+  - {fileID: 2104702261643857548}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -128,7 +130,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   attackTimer: 2
-  canFireProjectiles: 1
+  canFireProjectiles: 0
   fishProjectile: {fileID: 7075900198723623425, guid: 8625ebef2fdbae949a30e7eb0d2adac1,
     type: 3}
   firePossition: {fileID: 8343067288861399994}
@@ -159,6 +161,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourcesGainedPerCycle: 10
   timeBetweenNewResources: 10
+--- !u!114 &344622094220585126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115592285535721917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2065818c76648114c9d6665bda964759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CanBeHit:
+    serializedVersion: 2
+    m_Bits: 2048
+  bombTimer: 0
+  canBlowUp: 0
+  fishBomb: {fileID: 7075900198723623425, guid: 8625ebef2fdbae949a30e7eb0d2adac1,
+    type: 3}
+  BombPos: {fileID: 6051862628923081296}
+  blownup: 0
+--- !u!1 &6051862628923081296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2104702261643857548}
+  m_Layer: 0
+  m_Name: BombPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2104702261643857548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6051862628923081296}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.6, y: 0.66, z: -2.8696964}
+  m_LocalScale: {x: 8.766701, y: 8.89945, z: 6.666666}
+  m_Children: []
+  m_Father: {fileID: 115592285535721915}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8343067288861399994
 GameObject:
   m_ObjectHideFlags: 0

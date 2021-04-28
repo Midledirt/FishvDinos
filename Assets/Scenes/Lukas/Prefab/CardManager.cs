@@ -19,6 +19,8 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
     public int AttackType { get; private set; }
     public int FishHealth { get; private set; }
     public bool CanGenerateResources { get; private set; }
+
+    public bool CanExplode { get; private set; }
     private void Awake()
     {
         resourceManager = ResourceManager.instance;

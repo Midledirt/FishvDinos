@@ -20,3 +20,4 @@ MonoBehaviour:
   attacktype: 1
   fishHealth: 3
   canGenerateResources: 0
+  canExplode: 0

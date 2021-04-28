@@ -20,14 +20,18 @@ public class FriendlyUnitMenu : ScriptableObject
     [SerializeField] private int fishHealth;
     [Tooltip("Decides if the fish generates resources passively")]
     [SerializeField] private bool canGenerateResources;
+    [SerializeField] public bool canExplode;
     public int AttackType { get; private set; }
     public int FishHealth { get; private set; }
     public bool CanGenerateResources { get; private set; }
+
+    public bool CanExplode { get; private set; }
 
     public void ResetStats()
     {
         CanGenerateResources = canGenerateResources;
         AttackType = attacktype;
         FishHealth = fishHealth;
+        CanExplode = canExplode;
     }
 }
