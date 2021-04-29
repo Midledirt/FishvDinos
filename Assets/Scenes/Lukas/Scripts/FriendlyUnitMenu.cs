@@ -8,8 +8,9 @@ public class FriendlyUnitMenu : ScriptableObject
 {
 
     public Vector2 size;
-    public Texture FishIcon;
+    public Sprite FishIcon;
     public Sprite fishSprite;
+  //  public Sprite fishcard;
     public int cost;
     public float cooldown;
     [Tooltip("Decides what type of attack the fish does. 0 = no attack. 1 = basic attack.")]

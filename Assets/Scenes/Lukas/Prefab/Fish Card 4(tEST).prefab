@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &786705156702545497
+--- !u!1 &7273521178434811124
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,52 +8,82 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 786705156702545494}
-  - component: {fileID: 786705156702545492}
-  - component: {fileID: 3585018374601261776}
+  - component: {fileID: 7273521178434811131}
+  - component: {fileID: 7273521178434811129}
+  - component: {fileID: 7273521178434811130}
+  - component: {fileID: 6907052752833171581}
   m_Layer: 5
-  m_Name: Fish Card 1
+  m_Name: Fish Card 4(tEST)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &786705156702545494
+--- !u!224 &7273521178434811131
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786705156702545497}
-  m_LocalRotation: {x: 0, y: 0, z: -0.00017452026, w: 1}
+  m_GameObject: {fileID: 7273521178434811124}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 786705157307248407}
-  - {fileID: 786705158750923529}
+  - {fileID: 7273521179034271162}
+  - {fileID: 7273521179603433892}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.020000001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 125, y: 74}
   m_SizeDelta: {x: 20.86325, y: 92.000336}
   m_Pivot: {x: 0, y: 1}
---- !u!222 &786705156702545492
+--- !u!222 &7273521178434811129
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786705156702545497}
+  m_GameObject: {fileID: 7273521178434811124}
   m_CullTransparentMesh: 0
---- !u!114 &3585018374601261776
+--- !u!114 &7273521178434811130
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786705156702545497}
+  m_GameObject: {fileID: 7273521178434811124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 0}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6907052752833171581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7273521178434811124}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08eeff9469b8bae49adae75ab186ce79, type: 3}
@@ -66,7 +96,7 @@ MonoBehaviour:
     type: 3}
   isOverColl: 0
   colliderName: {fileID: 0}
---- !u!1 &786705157307248406
+--- !u!1 &7273521179034271163
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,9 +104,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 786705157307248407}
-  - component: {fileID: 786705157307248405}
-  - component: {fileID: 252164111258637776}
+  - component: {fileID: 7273521179034271162}
+  - component: {fileID: 7273521179034271160}
+  - component: {fileID: 9201632886526070420}
   m_Layer: 5
   m_Name: Fish icon
   m_TagString: Untagged
@@ -84,40 +114,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &786705157307248407
+--- !u!224 &7273521179034271162
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786705157307248406}
+  m_GameObject: {fileID: 7273521179034271163}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 786705156702545494}
+  m_Father: {fileID: 7273521178434811131}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -560.8, y: 26.7}
   m_SizeDelta: {x: 221, y: 138}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &786705157307248405
+--- !u!222 &7273521179034271160
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786705157307248406}
+  m_GameObject: {fileID: 7273521179034271163}
   m_CullTransparentMesh: 0
---- !u!114 &252164111258637776
+--- !u!114 &9201632886526070420
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786705157307248406}
+  m_GameObject: {fileID: 7273521179034271163}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -140,7 +170,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &786705158750923528
+--- !u!1 &7273521179603433893
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,9 +178,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 786705158750923529}
-  - component: {fileID: 786705158750923527}
-  - component: {fileID: 786705158750923526}
+  - component: {fileID: 7273521179603433892}
+  - component: {fileID: 7273521179603433898}
+  - component: {fileID: 7273521179603433899}
   m_Layer: 5
   m_Name: Fish cost
   m_TagString: Untagged
@@ -158,40 +188,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &786705158750923529
+--- !u!224 &7273521179603433892
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786705158750923528}
+  m_GameObject: {fileID: 7273521179603433893}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 786705156702545494}
+  m_Father: {fileID: 7273521178434811131}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 247, y: 169}
+  m_AnchoredPosition: {x: -314, y: 196}
   m_SizeDelta: {x: 100, y: 1}
   m_Pivot: {x: -0.21250328, y: 0.45529318}
---- !u!222 &786705158750923527
+--- !u!222 &7273521179603433898
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786705158750923528}
+  m_GameObject: {fileID: 7273521179603433893}
   m_CullTransparentMesh: 0
---- !u!114 &786705158750923526
+--- !u!114 &7273521179603433899
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786705158750923528}
+  m_GameObject: {fileID: 7273521179603433893}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -231,8 +261,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -267,7 +297,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -230.3343, y: 183.5779, z: 258.7734, w: -235.76596}
+  m_margin: {x: -211.14275, y: 183.5779, z: 484.8746, w: 56.343533}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

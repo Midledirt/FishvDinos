@@ -18,7 +18,7 @@ public class FishCardManager : MonoBehaviour
     public GameObject[] FishCards;
     public float cooldown;
     public int cost;
-    public Texture FishIcon;
+    public Sprite fishIcon;
 
     private void Start()
     {
@@ -44,12 +44,12 @@ public class FishCardManager : MonoBehaviour
         FishCards[index] = Card;
 
         //getting variebles
-        FishIcon = FishCardSO[index].FishIcon;
+        fishIcon = FishCardSO[index].FishIcon;
         cost = FishCardSO[index].cost;
         cooldown = FishCardSO[index].cooldown;
 
         //updating UI
-        Card.GetComponentInChildren<RawImage>().texture = FishIcon;
+        Card.GetComponentInChildren<Image>().sprite = fishIcon;
         Card.GetComponentInChildren<TMP_Text>().text = "" + cost;
 
         //Added by Jont

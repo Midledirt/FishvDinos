@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Pufferfish
   m_EditorClassIdentifier: 
   size: {x: 0.1, y: 0.1}
-  FishIcon: {fileID: 2800000, guid: a197acc1f6bc86a4babfede74a4ba6f8, type: 3}
+  FishIcon: {fileID: 21300000, guid: 378902061a85be341a5fccbf1dd5d138, type: 3}
   fishSprite: {fileID: 21300000, guid: a197acc1f6bc86a4babfede74a4ba6f8, type: 3}
   cost: 100
   cooldown: 15
   attacktype: 0
   fishHealth: 3
   canGenerateResources: 1
+  canExplode: 0
