@@ -16,7 +16,18 @@ public class scrFishAttack : MonoBehaviour
     [Tooltip("Where the projectile is fired from")]
     [SerializeField] private GameObject firePossition;
     public int fishAttackType;
+    private bool firesTwoProjectiles;
+    private bool hasMeleeAttack;
+    private int fishMeleeDamage;
+    private List<scrDinoHealth> dinosInMeleeRange;
+    private float timeSInceLastMeleeAttack;
+    private float meleeAttackTimer;
 
+    private void Start()
+    {
+        dinosInMeleeRange = new List<scrDinoHealth>();
+        meleeAttackTimer = 0.5f;
+    }
     private void FixedUpdate()
     {
         //print("My attack type is: " + fishAttackType);
@@ -28,6 +39,30 @@ public class scrFishAttack : MonoBehaviour
             //print("I have a target: " + hit.collider.name);
             FireProjectile();
         }
+        if(hasMeleeAttack)
+        {
+            timeSinceLastAttack += Time.deltaTime;
+            if(timeSinceLastAttack >= attackTimer)
+            {
+                timeSinceLastAttack = 0f;
+                foreach (scrDinoHealth _target in dinosInMeleeRange)
+                {
+                    if (_target != null)
+                    {
+                        _target.TakeDamage(fishMeleeDamage);
+                    }
+                }
+            }
+        }
+    }
+    public void AssignDoubleAttack(bool value)
+    {
+        firesTwoProjectiles = value;
+    }
+    public void AssignMelleAttack(bool value, int _damage)
+    {
+        hasMeleeAttack = value;
+        fishMeleeDamage = _damage;
     }
     public void AssignAttackType(int attacktype)
     {
@@ -50,13 +85,42 @@ public class scrFishAttack : MonoBehaviour
             {
                 //print("Firing projectile, from bodypos!");
                 Instantiate(fishProjectile, transform.position, transform.rotation);
+                if(firesTwoProjectiles)
+                {
+                    StartCoroutine(SecondAttack(0.2f));
+                }
                 return;
             }
             else if(firePossition != null)
             {
                 //print("Firing projectile, from firepos!");
                 Instantiate(fishProjectile, firePossition.transform.position, transform.rotation);
+                if (firesTwoProjectiles)
+                {
+                    StartCoroutine(SecondAttack(0.2f));
+                }
             }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Dino") && hasMeleeAttack)
+        {
+            print("Melee against dino!");
+            collision.TryGetComponent<scrDinoHealth>(out scrDinoHealth _targetHealth);
+            dinosInMeleeRange.Add(_targetHealth);
+        }
+    }
+    private IEnumerator SecondAttack(float timer)
+    {
+        yield return new WaitForSeconds(timer);
+        if(firePossition == null)
+        {
+            Instantiate(fishProjectile, transform.position, transform.rotation);
+        }
+        else if(firePossition != null)
+        {
+            Instantiate(fishProjectile, firePossition.transform.position, transform.rotation);
         }
     }
     private void OnEnable()

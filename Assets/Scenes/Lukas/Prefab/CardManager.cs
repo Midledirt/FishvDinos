@@ -17,13 +17,27 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
     SlotManager prevName;
     public int FishCost { get; private set; }
     public int AttackType { get; private set; }
+    public bool FiresTwoAttacks { get; private set; }
     public int FishHealth { get; private set; }
     public bool CanGenerateResources { get; private set; }
 
-    public bool CanExplode { get; private set; }
+    public bool ExplodeSettings { get; private set; }
+    public float ExplosionTimer { get; private set; }
+    public bool HasMeleeAttack { get; private set; }
+    public int MeleeDamage { get; private set; }
+
     private void Awake()
     {
         resourceManager = ResourceManager.instance;
+    }
+    public void SetMelleAttack(bool value, int _damage)
+    {
+        HasMeleeAttack = value;
+        MeleeDamage = _damage;
+    }
+    public void SetFiresTwoAttacks(bool value)
+    {
+        FiresTwoAttacks = value;
     }
     public void SetAttackType(int _type)
     {
@@ -37,6 +51,11 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
     public void SetCanGenerateResources(bool value)
     {
         CanGenerateResources = value;
+    }
+    public void SetExplosionSettings(bool value, float timer)
+    {
+        ExplodeSettings = value;
+        ExplosionTimer = timer;
     }
     public void SetCost(int _cost)
     {
@@ -92,10 +111,14 @@ public class CardManager : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
         //Added by Jont
         scrFishAttack fishAttack = fish.GetComponent<scrFishAttack>();
         fishAttack.AssignAttackType(AttackType);
+        fishAttack.AssignDoubleAttack(FiresTwoAttacks);
+        fishAttack.AssignMelleAttack(HasMeleeAttack, MeleeDamage);
         scrFishHealth fishHealth = fish.GetComponent<scrFishHealth>();
         fishHealth.AssignHealth(FishHealth);
         scrFishResourceGeneration fishResourceGeneration = fish.GetComponent<scrFishResourceGeneration>();
         fishResourceGeneration.SetCanGenerateResources(CanGenerateResources);
+        scrExplosion fishExplosion = fish.GetComponent<scrExplosion>();
+        fishExplosion.SetGonnaExplodeAndTimer(ExplodeSettings, ExplosionTimer);
 
         //  fishSprite = friendlyunitmenu.fishSprite;
         fish.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);

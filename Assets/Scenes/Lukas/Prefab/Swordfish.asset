@@ -15,9 +15,13 @@ MonoBehaviour:
   size: {x: 0.1, y: 0.1}
   FishIcon: {fileID: 21300000, guid: 12f382ae4713d9d4988726a68994087e, type: 3}
   fishSprite: {fileID: 21300000, guid: 898dd3ea1af321f4cb9904c31c3b531a, type: 3}
-  cost: 50
+  cost: 125
   cooldown: 20
-  attacktype: 1
-  fishHealth: 3
+  attacktype: 0
+  firesTwoAttacks: 0
+  fishHealth: 10
   canGenerateResources: 0
   canExplode: 0
+  explotionTimer: 0
+  hasMeleeAttack: 1
+  meleeDamage: 10

@@ -5225,7 +5225,7 @@ MonoBehaviour:
   FishCards: []
   cooldown: 0
   cost: 0
-  FishIcon: {fileID: 0}
+  fishIcon: {fileID: 0}
 --- !u!4 &1823158064
 Transform:
   m_ObjectHideFlags: 0
