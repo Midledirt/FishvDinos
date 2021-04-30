@@ -25,8 +25,7 @@ public class ResourceManager : MonoBehaviour
 
     private void Start()
     {
-        Resources = startingResources;
-        currentResources.text = Resources.ToString();
+       
 
         //Lukas la til
         GainResources(startingResources);

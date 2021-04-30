@@ -152,7 +152,7 @@ PrefabInstance:
     - target: {fileID: 964737621865701762, guid: 00507d9ae9a81c145be6a569d1bb39d3,
         type: 3}
       propertyPath: startingWaveSize
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 964737621865701762, guid: 00507d9ae9a81c145be6a569d1bb39d3,
         type: 3}
@@ -5592,7 +5592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentResources: {fileID: 1548668054}
-  startingResources: 200
+  startingResources: 125
   gainresourcesfx: {fileID: 1823158068}
   placefishsfx: {fileID: 1823158067}
 --- !u!82 &1823158067
