@@ -6,8 +6,16 @@ public class SlotManager : MonoBehaviour
 {
     public GameObject fish;
     public bool isOccupied = false;
- //   public CardManager cardManager;
+    //   public CardManager cardManager;
 
+
+    private void Update()
+    {
+        if(fish == null)
+        {
+            isOccupied = false;
+        }
+    }
     void OnMouseOver()
     {
 

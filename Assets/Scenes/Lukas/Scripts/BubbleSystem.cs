@@ -5,13 +5,16 @@ using UnityEngine;
 public class BubbleSystem : MonoBehaviour
 {
     public int BubbleValue;
-    public AudioSource bubbles;
+    public AudioSource bubblesAudio;
 
-
+    private void Awake()
+    {
+        bubblesAudio = GetComponent<AudioSource>();
+    }
     private void OnMouseDown()
     {
         GameObject.FindObjectOfType<ResourceManager>().GainResources(BubbleValue);
-        bubbles.Play();
+        bubblesAudio.Play();
 
         //Destroy(this.gameObject);
     }
