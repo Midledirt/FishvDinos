@@ -22,11 +22,15 @@ public class scrFishAttack : MonoBehaviour
     private List<scrDinoHealth> dinosInMeleeRange;
     private float timeSInceLastMeleeAttack;
     private float meleeAttackTimer;
+    private AudioSource fire;
+    private GameObject firey;
 
     private void Start()
     {
         dinosInMeleeRange = new List<scrDinoHealth>();
         meleeAttackTimer = 0.5f;
+        firey = GameObject.FindGameObjectWithTag("AudioPlayer4");
+        fire = firey.gameObject.GetComponent<AudioSource>();
     }
     private void FixedUpdate()
     {
@@ -85,6 +89,7 @@ public class scrFishAttack : MonoBehaviour
             {
                 //print("Firing projectile, from bodypos!");
                 Instantiate(fishProjectile, transform.position, transform.rotation);
+                fire.Play();
                 if(firesTwoProjectiles)
                 {
                     StartCoroutine(SecondAttack(0.2f));
@@ -95,6 +100,7 @@ public class scrFishAttack : MonoBehaviour
             {
                 //print("Firing projectile, from firepos!");
                 Instantiate(fishProjectile, firePossition.transform.position, transform.rotation);
+                fire.Play();
                 if (firesTwoProjectiles)
                 {
                     StartCoroutine(SecondAttack(0.2f));
@@ -117,10 +123,12 @@ public class scrFishAttack : MonoBehaviour
         if(firePossition == null)
         {
             Instantiate(fishProjectile, transform.position, transform.rotation);
+            fire.Play();
         }
         else if(firePossition != null)
         {
             Instantiate(fishProjectile, firePossition.transform.position, transform.rotation);
+            fire.Play();
         }
     }
     private void OnEnable()

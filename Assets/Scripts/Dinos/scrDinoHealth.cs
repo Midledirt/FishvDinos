@@ -8,7 +8,8 @@ public class scrDinoHealth : MonoBehaviour
     private ResourceManager resourceManager;
     private int dinoScore;
     private scrDino dino;
-    public AudioSource dinotakedamage;
+    private AudioSource dinotakedamage;
+    private GameObject audioplayer;
     
 
     private scrDinoStats statsHolder;
@@ -17,7 +18,7 @@ public class scrDinoHealth : MonoBehaviour
     {
         statsHolder = GetComponent<scrDinoStats>();
         dino = GetComponent<scrDino>();
-        dinotakedamage = GetComponent<AudioSource>();
+      //  dinotakedamage = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -25,15 +26,18 @@ public class scrDinoHealth : MonoBehaviour
         resourceManager = ResourceManager.instance; //Get the instance
         health = statsHolder.Stats.Health;
         dinoScore = statsHolder.Stats.DinoScore;
+        audioplayer = GameObject.FindGameObjectWithTag("AudioPlayer");
+        dinotakedamage = audioplayer.gameObject.GetComponent<AudioSource>();
     }
 
     public void TakeDamage(int _damage)
     {
         health -= _damage;
         //print("Ouch! Took " + _damage + " damage.");
-        dinotakedamage.Play();
+        
         if(health <= 0f)
         {
+            dinotakedamage.Play();
             DinoDies();
         }
     }

@@ -8,6 +8,10 @@ TagManager:
   - Canvas
   - Dino
   - Bubble
+  - AudioPlayer
+  - AudioPlayer2
+  - AudioPlayer3
+  - AudioPlayer4
   layers:
   - Default
   - TransparentFX

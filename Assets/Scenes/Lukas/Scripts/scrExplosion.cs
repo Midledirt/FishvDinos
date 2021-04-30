@@ -10,6 +10,8 @@ public class scrExplosion : MonoBehaviour
     [SerializeField] private Vector2 explosionSize;
     [SerializeField] private GameObject bombExplosion;
     private SpriteRenderer spriteRenderer;
+    private AudioSource bomb;
+    private GameObject bomby;
 
     private void Awake()
     {
@@ -21,6 +23,9 @@ public class scrExplosion : MonoBehaviour
         {
             timeSincePlaced = 0f;
         }
+
+        bomby = GameObject.FindGameObjectWithTag("AudioPlayer3");
+        bomb = bomby.gameObject.GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -29,6 +34,7 @@ public class scrExplosion : MonoBehaviour
             timeSincePlaced += Time.deltaTime;
             if(timeSincePlaced >= explosionTimer)
             {
+                bomb.Play();
                 Instantiate(bombExplosion, transform.position, transform.rotation);
                 Destroy(this.gameObject);
             }
