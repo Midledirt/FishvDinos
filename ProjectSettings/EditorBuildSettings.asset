@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Lukas/Lukas_Prototype.unity
-    guid: 2864a4a7c6a3a4e4197f05e90f731223
+    path: Assets/Lukas_Prototype.unity
+    guid: 1b50d5c4dcbb76e4988065b1c6fb0c7f
   - enabled: 1
     path: Assets/Scenes/PrototypeMain.unity
     guid: 08050ade5a83aa943b3c449aba75def3

@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ef332ec67ff3e941aabbdbe452cc3f3, type: 3}
-  m_Name: Swordfish
+  m_Name: Cod on duty
   m_EditorClassIdentifier: 
   size: {x: 0.1, y: 0.1}
-  FishIcon: {fileID: 21300000, guid: 12f382ae4713d9d4988726a68994087e, type: 3}
-  fishSprite: {fileID: 21300000, guid: 898dd3ea1af321f4cb9904c31c3b531a, type: 3}
-  cost: 100
-  cooldown: 20
-  attacktype: 0
+  FishIcon: {fileID: 21300000, guid: 378902061a85be341a5fccbf1dd5d138, type: 3}
+  fishSprite: {fileID: 21300000, guid: 882f52dfa6aed5741a6d5ca4a7b4275d, type: 3}
+  cost: 75
+  cooldown: 10
+  attacktype: 1
   firesTwoAttacks: 0
-  fishHealth: 10
+  fishHealth: 3
   canGenerateResources: 0
   canExplode: 0
   explotionTimer: 0
-  hasMeleeAttack: 1
-  meleeDamage: 3
+  hasMeleeAttack: 0
+  meleeDamage: 0
