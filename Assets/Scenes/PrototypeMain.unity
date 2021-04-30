@@ -142,7 +142,7 @@ PrefabInstance:
     - target: {fileID: 964737621865701762, guid: 00507d9ae9a81c145be6a569d1bb39d3,
         type: 3}
       propertyPath: numberOfWaves
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 964737621865701762, guid: 00507d9ae9a81c145be6a569d1bb39d3,
         type: 3}
@@ -152,7 +152,7 @@ PrefabInstance:
     - target: {fileID: 964737621865701762, guid: 00507d9ae9a81c145be6a569d1bb39d3,
         type: 3}
       propertyPath: startingWaveSize
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 964737621865701762, guid: 00507d9ae9a81c145be6a569d1bb39d3,
         type: 3}
@@ -2573,8 +2573,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d780032534851524d9eba458c2b77232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTime: 0.5
-  maxTime: 5
+  minTime: 5
+  maxTime: 6
   time: 0
   bubbles: {fileID: 6419885599504441977, guid: 42434a200429c104097e5144f527fe7a, type: 3}
   minPos: {x: -4.31, y: 6.22}

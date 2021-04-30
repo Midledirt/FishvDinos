@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e68a42b6b7264654884500c5f232f1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourcesGainedPerCycle: 10
+  resourcesGainedPerCycle: 25
   timeBetweenNewResources: 10
 --- !u!114 &7028146078488934552
 MonoBehaviour:
