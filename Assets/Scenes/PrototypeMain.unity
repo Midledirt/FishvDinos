@@ -5592,7 +5592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentResources: {fileID: 1548668054}
-  startingResources: 125
+  startingResources: 200
   gainresourcesfx: {fileID: 1823158068}
   placefishsfx: {fileID: 1823158067}
 --- !u!82 &1823158067
