@@ -12,7 +12,7 @@ public class DinoStatsSO : ScriptableObject
     [Tooltip("How fast the dino attacks. A higher number means a slower attack")]
     [SerializeField] private float dinoAttackRate;
     [Tooltip("How fast the dino moves.")]
-    [Range(1f, 5f)]
+    [Range(0.2f, 1.2f)]
     [SerializeField] private float dinoMovementSpeed;
 
 
