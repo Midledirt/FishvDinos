@@ -7,6 +7,12 @@ public class scrFishHealth : MonoBehaviour
 {
     public static Action<GameObject> OnFishKilled;
     private int fishHealth;
+    public AudioSource fishdamage;
+
+    private void Awake()
+    {
+        fishdamage = GetComponent<AudioSource>();
+    }
 
     public void TakeDamage(scrFishHealth _target, int _damage)
     {
@@ -14,6 +20,7 @@ public class scrFishHealth : MonoBehaviour
         {
             fishHealth -= _damage;
             print("I TOOK " + _damage + " DAMAGE!");
+            fishdamage.Play();
             if (fishHealth <= 0)
             {
                 FishDies();

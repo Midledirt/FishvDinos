@@ -10,6 +10,8 @@ public class ResourceManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI currentResources;
     [Tooltip("How many resources the player starts with")]
     [SerializeField] private int startingResources;
+    public AudioSource gainresourcesfx;
+    public AudioSource placefishsfx;
 
 
     public int Resources { get; private set; }
@@ -17,6 +19,8 @@ public class ResourceManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+      //  gainresourcesfx = GetComponent<AudioSource>();
+        
     }
 
     private void Start()
@@ -33,10 +37,12 @@ public class ResourceManager : MonoBehaviour
         //print("Resources updated");
         Resources += _amount; //Update the variable
         currentResources.text = Resources.ToString(); //Update the text
+        gainresourcesfx.Play();
     }
     public void SpendResources(int _amount)
     {
         Resources -= _amount; //Update the variable
         currentResources.text = Resources.ToString(); //Update the text
+        placefishsfx.Play();
     }
 }

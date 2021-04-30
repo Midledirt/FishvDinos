@@ -8,6 +8,8 @@ public class scrDinoHealth : MonoBehaviour
     private ResourceManager resourceManager;
     private int dinoScore;
     private scrDino dino;
+    public AudioSource dinotakedamage;
+    
 
     private scrDinoStats statsHolder;
 
@@ -15,6 +17,7 @@ public class scrDinoHealth : MonoBehaviour
     {
         statsHolder = GetComponent<scrDinoStats>();
         dino = GetComponent<scrDino>();
+        dinotakedamage = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -28,6 +31,7 @@ public class scrDinoHealth : MonoBehaviour
     {
         health -= _damage;
         //print("Ouch! Took " + _damage + " damage.");
+        dinotakedamage.Play();
         if(health <= 0f)
         {
             DinoDies();
