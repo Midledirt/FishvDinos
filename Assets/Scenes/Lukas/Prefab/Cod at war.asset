@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ef332ec67ff3e941aabbdbe452cc3f3, type: 3}
-  m_Name: Pufferfish
+  m_Name: Cod at war
   m_EditorClassIdentifier: 
   size: {x: 0.1, y: 0.1}
-  FishIcon: {fileID: 21300000, guid: 7e15550a8ac36c649858d5a2913ca9f9, type: 3}
-  fishSprite: {fileID: 21300000, guid: 20f0c49352689cb499a3b9155edefbd8, type: 3}
-  cost: 50
-  cooldown: 15
-  attacktype: 0
-  firesTwoAttacks: 0
-  fishHealth: 3
-  canGenerateResources: 1
+  FishIcon: {fileID: 21300000, guid: 6cf9d82e715b11449a32f101c0601e6b, type: 3}
+  fishSprite: {fileID: 21300000, guid: 24ee2dc5d84d85741b6e21eb9062c18e, type: 3}
+  cost: 150
+  cooldown: 20
+  attacktype: 1
+  firesTwoAttacks: 1
+  fishHealth: 0
+  canGenerateResources: 0
   canExplode: 0
   explotionTimer: 0
   hasMeleeAttack: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: {x: 0.1, y: 0.1}
   FishIcon: {fileID: 21300000, guid: 12f382ae4713d9d4988726a68994087e, type: 3}
-  fishSprite: {fileID: 21300000, guid: 898dd3ea1af321f4cb9904c31c3b531a, type: 3}
+  fishSprite: {fileID: 21300000, guid: cd80906e8839a1648a7d93c0db0fa0da, type: 3}
   cost: 100
   cooldown: 20
   attacktype: 0

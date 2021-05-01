@@ -18,6 +18,10 @@ MonoBehaviour:
   cost: 150
   cooldown: 20
   attacktype: 0
+  firesTwoAttacks: 0
   fishHealth: 20
   canGenerateResources: 0
   canExplode: 0
+  explotionTimer: 0
+  hasMeleeAttack: 0
+  meleeDamage: 0
