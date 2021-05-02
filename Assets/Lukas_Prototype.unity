@@ -4931,6 +4931,8 @@ MonoBehaviour:
   m_text: 'Drag to place your fishes on the field and defend the fish castle from
     the dinos.
 
+    Click and collect bubbles.
+
 
 '
   m_isRightToLeft: 0
@@ -7054,7 +7056,7 @@ MonoBehaviour:
     Wolff
 
 
-    Karoline Tolefsen
+    Karoline Tollefsen
 
 
     Ingrid Margit Hagen'
